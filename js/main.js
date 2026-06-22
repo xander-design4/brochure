@@ -140,58 +140,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ========== FULL PORTFOLIO DATA ========== */
+  // Thumbnails (img/thumbs/) for grid, large (img/large/) for lightbox
+  // Generated from original folders — total ~19MB vs 568MB original
   const projects = [
     // ===== BRANDING (23) =====
-    { name: 'Agencia de Analistas de Conducta Infantil', category: 'branding', folder: 'Logos y Publicidad/Agencia de Analistas de Conducta Infantil', images: ['A.jpg', '2.png', '3.png'] },
-    { name: 'Agencia de Diseño', category: 'branding', folder: 'Logos y Publicidad/Agencia de Diseno ', images: ['2025_Mesa de trabajo 1.png', 'Hover Over_Design_Oficial 2025_Mesa de trabajo 1 copia 2.png', 'X (16).png', 'x-01.png'] },
-    { name: 'Agencia de Marketing Digital', category: 'branding', folder: 'Logos y Publicidad/Agencia de Marketing digital', images: ['8593319.jpg', '8606477.jpg', 'LEMNI.png'] },
-    { name: 'Agencia de Viajes', category: 'branding', folder: 'Logos y Publicidad/Agencia de Viajes', images: ['0 (2).jpg', 'X (1).png'] },
-    { name: 'Arquitecto', category: 'branding', folder: 'Logos y Publicidad/Arquitecto ', images: ['Logo Jinayra_PNG-03.png', 'Logo Jinayra_ JPG-01.jpg', 'Wallpapers (2).png', 'Wallpapers (8).png'] },
-    { name: 'Centro de Convenciones', category: 'branding', folder: 'Logos y Publicidad/Centro de Convenciones ', images: ['GEVENTPO_Centro de Convenciones-09.png', 'Logo_mockup_on_the_glass_2.jpg', 'Logo_mockup_on_the_glass_door1.jpg'] },
-    { name: 'Del Rio Law Group', category: 'branding', folder: 'Logos y Publicidad/Del Rio Law Group', images: ['del RIO-01.png', '0 (1).jpg', '0 (1).png', '16.png', '5.png', 'Brochure-01.jpg', 'Brochure-02.jpg'] },
-    { name: 'DJ', category: 'branding', folder: 'Logos y Publicidad/DJ', images: ['Bryan DJ.jpg'] },
-    { name: 'Doctor Maidiel — Ginecobstetra', category: 'branding', folder: 'Logos y Publicidad/Doctor Maidiel _ Ginecobstetra', images: ['1.jpg', '3.jpg', '4.jpg', 'para maidiel.jpg'] },
-    { name: 'Doctora Leyanis — Cirujana Plástica', category: 'branding', folder: 'Logos y Publicidad/Doctora Leyanis_ Cirujana plastica', images: ['LS_0 (4).png', 'LS_0 (1).jpg', 'LS_0 (1).png', 'LS_0 (2).png'] },
-    { name: 'Empresa de Acueducto', category: 'branding', folder: 'Logos y Publicidad/Empresa de Acueducto', images: ['Final-01.png', 'Acueducto-05.png', 'Acueducto-07.png', 'Logo_mockup.jpg', 'Manual Aguas de Mayabeque.jpg'] },
-    { name: 'Estilista', category: 'branding', folder: 'Logos y Publicidad/Estilista', images: ['E.jpg', 'Lala Lashes.jpg'] },
-    { name: 'Feria de Investigación Científica', category: 'branding', folder: 'Logos y Publicidad/Feria de Investigacion Cientifica de Agricultura y Ganaderia', images: ['AGROCIENCIAS (1).jpg', 'AGROCIENCIAS (4).jpg', 'agrociencias-04.png'] },
-    { name: 'Fitness', category: 'branding', folder: 'Logos y Publicidad/Fitness', images: ['Simple Balance.jpg'] },
-    { name: 'Gimnasio de Crossfit', category: 'branding', folder: 'Logos y Publicidad/Gimnasio de Crossfit', images: ['EJEMPLO (1).png', 'EJEMPLO (3).png', 'EJEMPLO (4).png', 'z_Mesa de trabajo 1 copia 15_Mesa de trabajo 1 copia 15.png'] },
-    { name: 'Granja Agrícola y Ganadera', category: 'branding', folder: 'Logos y Publicidad/Granja Agricola y Ganadera', images: ['0 (2).jpg', '0 (3).jpg', '0 (4).jpg', 'X (12).png'] },
-    { name: 'Juegos de Lógica', category: 'branding', folder: 'Logos y Publicidad/Juegos de Logica', images: ['White_T_Shirt_Model_Front_View_Mockup.jpg', 'burro_Mesa de trabajo 1 copia 2.png', 'logo_mockup_135.jpg', 'Logo_mockup.jpg'] },
-    { name: 'Ministerio de Diáconos', category: 'branding', folder: 'Logos y Publicidad/Ministerio de Diaconos', images: ['Ministerio de Diáconos.jpg'] },
-    { name: 'Restaurante Italiano', category: 'branding', folder: 'Logos y Publicidad/Restaurante italiano ', images: ['Vita Nuova.jpg', 'P30H1R1222.jpg', 'tablilla.jpg', 'Vita Nuova menú bar.jpg', 'Vita Nuova menú mesa.jpg'] },
-    { name: 'Taller de Componentes Gaming', category: 'branding', folder: 'Logos y Publicidad/Taller de componentes Gaming', images: ['IMG_20200813_101946.png', '0 (1).jpg', '3.jpg', 'Logo_Mockup_070.jpg'] },
-    { name: 'Taller Móvil de Celulares', category: 'branding', folder: 'Logos y Publicidad/Taller movil de venta y reparacion de celulares', images: ['Shopi Mobil-02.png', '10.jpg', '5.jpg', 'Shopi Mobil-01.png'] },
-    { name: 'Tienda de Productos Artesanales 2K', category: 'branding', folder: 'Logos y Publicidad/Tienda de productos artesanales 2K', images: ['2k.jpg', '2k_1.jpg', '5921454.jpg'] },
-    { name: 'Tienda Feminista de Velas Artesanales', category: 'branding', folder: 'Logos y Publicidad/Tienda feminista de velas artesanales', images: ['Chely_Identidad-21.png', '15.jpg', 'candle-05.jpg', 'Logo_Mockup_070.jpg'] },
+    { name: 'Agencia de Analistas de Conducta Infantil', category: 'branding', thumbs: ['img/thumbs/00-00.jpg','img/thumbs/00-01.jpg','img/thumbs/00-02.jpg'], large: ['img/large/00-00.jpg','img/large/00-01.jpg','img/large/00-02.jpg'] },
+    { name: 'Agencia de Diseño', category: 'branding', thumbs: ['img/thumbs/01-00.jpg','img/thumbs/01-01.jpg','img/thumbs/01-02.jpg','img/thumbs/01-03.jpg'], large: ['img/large/01-00.jpg','img/large/01-01.jpg','img/large/01-02.jpg','img/large/01-03.jpg'] },
+    { name: 'Agencia de Marketing Digital', category: 'branding', thumbs: ['img/thumbs/02-00.jpg','img/thumbs/02-01.jpg','img/thumbs/02-02.jpg'], large: ['img/large/02-00.jpg','img/large/02-01.jpg','img/large/02-02.jpg'] },
+    { name: 'Agencia de Viajes', category: 'branding', thumbs: ['img/thumbs/03-00.jpg','img/thumbs/03-01.jpg'], large: ['img/large/03-00.jpg','img/large/03-01.jpg'] },
+    { name: 'Arquitecto', category: 'branding', thumbs: ['img/thumbs/04-00.jpg','img/thumbs/04-01.jpg','img/thumbs/04-02.jpg','img/thumbs/04-03.jpg'], large: ['img/large/04-00.jpg','img/large/04-01.jpg','img/large/04-02.jpg','img/large/04-03.jpg'] },
+    { name: 'Centro de Convenciones', category: 'branding', thumbs: ['img/thumbs/05-00.jpg','img/thumbs/05-01.jpg','img/thumbs/05-02.jpg'], large: ['img/large/05-00.jpg','img/large/05-01.jpg','img/large/05-02.jpg'] },
+    { name: 'Del Rio Law Group', category: 'branding', thumbs: ['img/thumbs/06-00.jpg','img/thumbs/06-01.jpg','img/thumbs/06-02.jpg','img/thumbs/06-03.jpg','img/thumbs/06-04.jpg','img/thumbs/06-05.jpg','img/thumbs/06-06.jpg'], large: ['img/large/06-00.jpg','img/large/06-01.jpg','img/large/06-02.jpg','img/large/06-03.jpg','img/large/06-04.jpg','img/large/06-05.jpg','img/large/06-06.jpg'] },
+    { name: 'DJ', category: 'branding', thumbs: ['img/thumbs/07-00.jpg'], large: ['img/large/07-00.jpg'] },
+    { name: 'Doctor Maidiel — Ginecobstetra', category: 'branding', thumbs: ['img/thumbs/08-00.jpg','img/thumbs/08-01.jpg','img/thumbs/08-02.jpg','img/thumbs/08-03.jpg'], large: ['img/large/08-00.jpg','img/large/08-01.jpg','img/large/08-02.jpg','img/large/08-03.jpg'] },
+    { name: 'Doctora Leyanis — Cirujana Plástica', category: 'branding', thumbs: ['img/thumbs/09-00.jpg','img/thumbs/09-01.jpg','img/thumbs/09-02.jpg','img/thumbs/09-03.jpg'], large: ['img/large/09-00.jpg','img/large/09-01.jpg','img/large/09-02.jpg','img/large/09-03.jpg'] },
+    { name: 'Empresa de Acueducto', category: 'branding', thumbs: ['img/thumbs/10-00.jpg','img/thumbs/10-01.jpg','img/thumbs/10-02.jpg','img/thumbs/10-03.jpg','img/thumbs/10-04.jpg'], large: ['img/large/10-00.jpg','img/large/10-01.jpg','img/large/10-02.jpg','img/large/10-03.jpg','img/large/10-04.jpg'] },
+    { name: 'Estilista', category: 'branding', thumbs: ['img/thumbs/11-00.jpg','img/thumbs/11-01.jpg'], large: ['img/large/11-00.jpg','img/large/11-01.jpg'] },
+    { name: 'Feria de Investigación Científica', category: 'branding', thumbs: ['img/thumbs/12-00.jpg','img/thumbs/12-01.jpg','img/thumbs/12-02.jpg'], large: ['img/large/12-00.jpg','img/large/12-01.jpg','img/large/12-02.jpg'] },
+    { name: 'Fitness', category: 'branding', thumbs: ['img/thumbs/13-00.jpg'], large: ['img/large/13-00.jpg'] },
+    { name: 'Gimnasio de Crossfit', category: 'branding', thumbs: ['img/thumbs/14-00.jpg','img/thumbs/14-01.jpg','img/thumbs/14-02.jpg','img/thumbs/14-03.jpg'], large: ['img/large/14-00.jpg','img/large/14-01.jpg','img/large/14-02.jpg','img/large/14-03.jpg'] },
+    { name: 'Granja Agrícola y Ganadera', category: 'branding', thumbs: ['img/thumbs/15-00.jpg','img/thumbs/15-01.jpg','img/thumbs/15-02.jpg','img/thumbs/15-03.jpg'], large: ['img/large/15-00.jpg','img/large/15-01.jpg','img/large/15-02.jpg','img/large/15-03.jpg'] },
+    { name: 'Juegos de Lógica', category: 'branding', thumbs: ['img/thumbs/16-00.jpg','img/thumbs/16-01.jpg','img/thumbs/16-02.jpg','img/thumbs/16-03.jpg'], large: ['img/large/16-00.jpg','img/large/16-01.jpg','img/large/16-02.jpg','img/large/16-03.jpg'] },
+    { name: 'Ministerio de Diáconos', category: 'branding', thumbs: ['img/thumbs/17-00.jpg'], large: ['img/large/17-00.jpg'] },
+    { name: 'Restaurante Italiano', category: 'branding', thumbs: ['img/thumbs/18-00.jpg','img/thumbs/18-01.jpg','img/thumbs/18-02.jpg','img/thumbs/18-03.jpg','img/thumbs/18-04.jpg'], large: ['img/large/18-00.jpg','img/large/18-01.jpg','img/large/18-02.jpg','img/large/18-03.jpg','img/large/18-04.jpg'] },
+    { name: 'Taller de Componentes Gaming', category: 'branding', thumbs: ['img/thumbs/19-00.jpg','img/thumbs/19-01.jpg','img/thumbs/19-02.jpg','img/thumbs/19-03.jpg'], large: ['img/large/19-00.jpg','img/large/19-01.jpg','img/large/19-02.jpg','img/large/19-03.jpg'] },
+    { name: 'Taller Móvil de Celulares', category: 'branding', thumbs: ['img/thumbs/20-00.jpg','img/thumbs/20-01.jpg','img/thumbs/20-02.jpg','img/thumbs/20-03.jpg'], large: ['img/large/20-00.jpg','img/large/20-01.jpg','img/large/20-02.jpg','img/large/20-03.jpg'] },
+    { name: 'Tienda de Productos Artesanales 2K', category: 'branding', thumbs: ['img/thumbs/21-00.jpg','img/thumbs/21-01.jpg','img/thumbs/21-02.jpg'], large: ['img/large/21-00.jpg','img/large/21-01.jpg','img/large/21-02.jpg'] },
+    { name: 'Tienda Feminista de Velas Artesanales', category: 'branding', thumbs: ['img/thumbs/22-00.jpg','img/thumbs/22-01.jpg','img/thumbs/22-02.jpg','img/thumbs/22-03.jpg'], large: ['img/large/22-00.jpg','img/large/22-01.jpg','img/large/22-02.jpg','img/large/22-03.jpg'] },
     // ===== WEB (7) =====
-    { name: 'App — Beauty Store', category: 'web', folder: 'WEB', images: ['App - Beauty store.jpg'] },
-    { name: 'Email Template — HQ Parfums', category: 'web', folder: 'WEB', images: ['Email template - HQ Parfums.png'] },
-    { name: 'Landing Page — Mindlock', category: 'web', folder: 'WEB', images: ['Landing page - Mindlock.png'] },
-    { name: 'Landing Page — Writing Jobs', category: 'web', folder: 'WEB', images: ['Landing page - Writing jobs.png'] },
-    { name: 'Sitio Web — Dicom', category: 'web', folder: 'WEB', images: ['Sitio web - Dicom.png', 'Sitio web - Dicom (con hover).png'] },
-    { name: 'Sitio Web — Laptop Battery', category: 'web', folder: 'WEB', images: ['Sitio web - Laptop battery HQ.png'] },
-    { name: 'Sitio Web — Scrap Foam', category: 'web', folder: 'WEB', images: ['Sitio web - Scrap foam.png'] },
+    { name: 'App — Beauty Store', category: 'web', thumbs: ['img/thumbs/23-00.jpg'], large: ['img/large/23-00.jpg'] },
+    { name: 'Email Template — HQ Parfums', category: 'web', thumbs: ['img/thumbs/24-00.jpg'], large: ['img/large/24-00.jpg'] },
+    { name: 'Landing Page — Mindlock', category: 'web', thumbs: ['img/thumbs/25-00.jpg'], large: ['img/large/25-00.jpg'] },
+    { name: 'Landing Page — Writing Jobs', category: 'web', thumbs: ['img/thumbs/26-00.jpg'], large: ['img/large/26-00.jpg'] },
+    { name: 'Sitio Web — Dicom', category: 'web', thumbs: ['img/thumbs/27-00.jpg','img/thumbs/27-01.jpg'], large: ['img/large/27-00.jpg','img/large/27-01.jpg'] },
+    { name: 'Sitio Web — Laptop Battery', category: 'web', thumbs: ['img/thumbs/28-00.jpg'], large: ['img/large/28-00.jpg'] },
+    { name: 'Sitio Web — Scrap Foam', category: 'web', thumbs: ['img/thumbs/29-00.jpg'], large: ['img/large/29-00.jpg'] },
     // ===== 3D (8) =====
-    { name: 'Autobús Infantil', category: '3d', folder: '3D/Autobus infantil', images: ['1bd38c48-aa59-488e-9a6e-b4646714d3c5.png', '70e2f74f-d93f-4d78-b012-984b28339c5a.png', 'e258f57b-a9cc-49eb-9ec9-690114f542af.png'] },
-    { name: 'Co-living House Barcelona', category: '3d', folder: '3D/Co-living house en Barcelona', images: ['x_Mesa de trabajo 1 copia 8.png', '0 (1).png', '0 (2).png', '1 (1).png', '1 (2).png', '2 (1).png', '2 (2).png', 'DD_Mesa de trabajo 1 copia 4.png', 'DD_Mesa de trabajo 1 copia 5.png', 'X (10).png', 'X (11).png', 'X (12).png', 'X (13).png', 'X (1).png', 'X (2).png', 'X (3).png', 'X (8).png', 'X (9).png', 'x_Mesa de trabajo 1 copia 10.png', 'x_Mesa de trabajo 1 copia 11.png', 'x_Mesa de trabajo 1 copia 9.png'] },
-    { name: 'Hotel de Campo', category: '3d', folder: '3D/Hotel de Campo', images: ['Proyecto_ rancho_mar (9).jpg', 'Proyecto_ rancho_mar  (5.5).jpg', 'Proyecto_ rancho_mar (15).jpg', 'Proyecto_ rancho_mar (7).jpg'] },
-    { name: 'Jr. Suite de Hotel', category: '3d', folder: '3D/Jr. Suit de Hotel', images: ['estos (9).jpg', 'BA;O_Mesa de trabajo 1 copia 6.png', 'BA;O_Mesa de trabajo 1 copia 7.png', 'estos (10).jpg', 'estos (1).jpg', 'estos (2).jpg', 'estos (3).jpg', 'estos (4).jpg', 'estos (7).jpg', 'estos (8).jpg'] },
-    { name: 'Restaurante Clásico', category: '3d', folder: '3D/Restaurante Clasico', images: ['0 (2).jpg', '0 (1).jpg', 'Espacios Interiores Restaurante Clasico.jpg', 'Sin título-2_Mesa de trabajo 1 copia 2.jpg', 'Sin título-2_Mesa de trabajo 1 copia 4.jpg', 'Sin título-2_Mesa de trabajo 1 copia.jpg', 'Sin título-2_Mesa de trabajo 1.jpg'] },
-    { name: 'Stand FILH', category: '3d', folder: '3D/Stand FILH', images: ['X (4).png', 'Enscape_2022-01-12-03-03-46.jpg', 'ONBC.png', 'Reconocimiento.png'] },
-    { name: 'Terraza Hotel Pasacaballos', category: '3d', folder: '3D/Terraza de Hotel Pasacaballos', images: ['2 (1).jpg', '0.jpg'] },
-    { name: 'TV Studio', category: '3d', folder: '3D/TV Studio', images: ['X (17).png', '11.jpg', '12.jpg', '2.jpg', '3.jpg', '4.jpg', 'X (16).png'] },
+    { name: 'Autobús Infantil', category: '3d', thumbs: ['img/thumbs/30-00.jpg','img/thumbs/30-01.jpg','img/thumbs/30-02.jpg'], large: ['img/large/30-00.jpg','img/large/30-01.jpg','img/large/30-02.jpg'] },
+    { name: 'Co-living House Barcelona', category: '3d', thumbs: ['img/thumbs/31-00.jpg','img/thumbs/31-01.jpg','img/thumbs/31-02.jpg','img/thumbs/31-03.jpg','img/thumbs/31-04.jpg','img/thumbs/31-05.jpg','img/thumbs/31-06.jpg','img/thumbs/31-07.jpg','img/thumbs/31-08.jpg','img/thumbs/31-09.jpg','img/thumbs/31-10.jpg','img/thumbs/31-11.jpg','img/thumbs/31-12.jpg','img/thumbs/31-13.jpg','img/thumbs/31-14.jpg','img/thumbs/31-15.jpg','img/thumbs/31-16.jpg','img/thumbs/31-17.jpg','img/thumbs/31-18.jpg','img/thumbs/31-19.jpg','img/thumbs/31-20.jpg'], large: ['img/large/31-00.jpg','img/large/31-01.jpg','img/large/31-02.jpg','img/large/31-03.jpg','img/large/31-04.jpg','img/large/31-05.jpg','img/large/31-06.jpg','img/large/31-07.jpg','img/large/31-08.jpg','img/large/31-09.jpg','img/large/31-10.jpg','img/large/31-11.jpg','img/large/31-12.jpg','img/large/31-13.jpg','img/large/31-14.jpg','img/large/31-15.jpg','img/large/31-16.jpg','img/large/31-17.jpg','img/large/31-18.jpg','img/large/31-19.jpg','img/large/31-20.jpg'] },
+    { name: 'Hotel de Campo', category: '3d', thumbs: ['img/thumbs/32-00.jpg','img/thumbs/32-01.jpg','img/thumbs/32-02.jpg','img/thumbs/32-03.jpg'], large: ['img/large/32-00.jpg','img/large/32-01.jpg','img/large/32-02.jpg','img/large/32-03.jpg'] },
+    { name: 'Jr. Suite de Hotel', category: '3d', thumbs: ['img/thumbs/33-00.jpg','img/thumbs/33-01.jpg','img/thumbs/33-02.jpg','img/thumbs/33-03.jpg','img/thumbs/33-04.jpg','img/thumbs/33-05.jpg','img/thumbs/33-06.jpg','img/thumbs/33-07.jpg','img/thumbs/33-08.jpg','img/thumbs/33-09.jpg'], large: ['img/large/33-00.jpg','img/large/33-01.jpg','img/large/33-02.jpg','img/large/33-03.jpg','img/large/33-04.jpg','img/large/33-05.jpg','img/large/33-06.jpg','img/large/33-07.jpg','img/large/33-08.jpg','img/large/33-09.jpg'] },
+    { name: 'Restaurante Clásico', category: '3d', thumbs: ['img/thumbs/34-00.jpg','img/thumbs/34-01.jpg','img/thumbs/34-02.jpg','img/thumbs/34-03.jpg','img/thumbs/34-04.jpg','img/thumbs/34-05.jpg','img/thumbs/34-06.jpg'], large: ['img/large/34-00.jpg','img/large/34-01.jpg','img/large/34-02.jpg','img/large/34-03.jpg','img/large/34-04.jpg','img/large/34-05.jpg','img/large/34-06.jpg'] },
+    { name: 'Stand FILH', category: '3d', thumbs: ['img/thumbs/35-00.jpg','img/thumbs/35-01.jpg','img/thumbs/35-02.jpg','img/thumbs/35-03.jpg'], large: ['img/large/35-00.jpg','img/large/35-01.jpg','img/large/35-02.jpg','img/large/35-03.jpg'] },
+    { name: 'Terraza Hotel Pasacaballos', category: '3d', thumbs: ['img/thumbs/36-00.jpg','img/thumbs/36-01.jpg'], large: ['img/large/36-00.jpg','img/large/36-01.jpg'] },
+    { name: 'TV Studio', category: '3d', thumbs: ['img/thumbs/37-00.jpg','img/thumbs/37-01.jpg','img/thumbs/37-02.jpg','img/thumbs/37-03.jpg','img/thumbs/37-04.jpg','img/thumbs/37-05.jpg','img/thumbs/37-06.jpg'], large: ['img/large/37-00.jpg','img/large/37-01.jpg','img/large/37-02.jpg','img/large/37-03.jpg','img/large/37-04.jpg','img/large/37-05.jpg','img/large/37-06.jpg'] },
   ];
 
   /* ========== PORTFOLIO RENDER ========== */
   const grid = document.getElementById('portfolioGrid');
   const filterBtns = document.querySelectorAll('.filter-btn');
   const countEl = document.getElementById('portfolioCount');
-
-  function folderPath(folder, file) {
-    return encodeURI(folder + '/' + file);
-  }
 
   function categoryLabel(cat) {
     return { branding: 'Branding', web: 'Web', '3d': '3D' }[cat] || cat;
@@ -209,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
       item.dataset.index = realIdx;
       item.innerHTML = `
         <div class="portfolio-thumb">
-          <img src="${folderPath(project.folder, project.images[0])}" alt="${project.name}" loading="lazy">
-          <div class="portfolio-thumb-overlay"><span>Ver (${project.images.length})</span></div>
+          <img src="${project.thumbs[0]}" alt="${project.name}" loading="lazy" width="500" height="375">
+          <div class="portfolio-thumb-overlay"><span>Ver (${project.thumbs.length})</span></div>
         </div>
         <div class="portfolio-meta">
           <span class="portfolio-cat">${categoryLabel(project.category)}</span>
@@ -257,9 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateLightbox() {
     const project = projects[currentProjectIdx];
-    lightboxImg.src = folderPath(project.folder, project.images[currentImageIdx]);
+    lightboxImg.src = project.large[currentImageIdx];
     lightboxTitle.textContent = project.name;
-    lightboxCounter.textContent = (currentImageIdx + 1) + ' / ' + project.images.length;
+    lightboxCounter.textContent = (currentImageIdx + 1) + ' / ' + project.large.length;
   }
 
   function closeLightbox() {
@@ -269,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function navigateLightbox(dir) {
     const project = projects[currentProjectIdx];
-    currentImageIdx = (currentImageIdx + dir + project.images.length) % project.images.length;
+    currentImageIdx = (currentImageIdx + dir + project.large.length) % project.large.length;
     updateLightbox();
   }
 

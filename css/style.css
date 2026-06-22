@@ -130,15 +130,17 @@ ul { list-style: none; }
   background: none;
   border: none;
   cursor: pointer;
-  width: 28px;
-  height: 20px;
+  width: 32px;
+  height: 24px;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-toggle span {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 2px;
+  width: 28px;
   height: 1.5px;
   background: var(--ink);
   transition: var(--transition);
@@ -1006,11 +1008,16 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 32px;
-    z-index: 99;
+    z-index: 95;
+    padding-top: 60px;
   }
 
   .nav-menu.open {
     display: flex;
+  }
+
+  .nav-menu li {
+    list-style: none;
   }
 
   .nav-menu li a {
@@ -1018,12 +1025,19 @@ footer {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--ink);
+    letter-spacing: -0.01em;
   }
 
   .nav-toggle {
-    display: block;
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    z-index: 101;
     position: relative;
+    background: var(--cream);
+    padding: 8px;
+    border-radius: 4px;
   }
 
   #about, #full-portfolio, #skills, #approach {
