@@ -282,6 +282,21 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.src = project.large[currentImageIdx];
     lightboxTitle.textContent = project.name;
     lightboxCounter.textContent = (currentImageIdx + 1) + ' / ' + project.large.length;
+
+    // Auto-zoom for very tall images (landing page screenshots)
+    lightboxImg.onload = function() {
+      const ratio = this.naturalHeight / this.naturalWidth;
+      if (ratio > 2) {
+        // Tall image: zoom so width fills screen, start at top
+        const screenWidth = window.innerWidth * 0.85;
+        const zoomNeeded = screenWidth / this.offsetWidth;
+        zoomLevel = Math.max(1.5, Math.min(4, zoomNeeded));
+        panY = 0;
+        panX = 0;
+        applyZoomPan();
+        lightboxImg.style.cursor = 'grab';
+      }
+    };
   }
 
   function closeLightbox() {
