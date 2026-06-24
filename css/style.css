@@ -4,15 +4,15 @@
    ============================================ */
 
 :root {
-  --cream: #F5F2EC;
-  --cream-dark: #EDE9E1;
-  --ink: #111111;
-  --ink-soft: #1A1A1A;
-  --gray: #77736D;
-  --gray-light: #C9C4BC;
-  --gray-line: #D9D4CB;
-  --accent: #1F3A3D;
-  --terracota: #A85C3E;
+  --cream: #111111;
+  --cream-dark: #1A1A1A;
+  --ink: #F5F2EC;
+  --ink-soft: #EDE9E1;
+  --gray: #9A958D;
+  --gray-light: #5A5650;
+  --gray-line: #2A2724;
+  --accent: #3A6B6E;
+  --terracota: #C2764E;
   --white: #FAFAFA;
 
   --font-display: 'Space Grotesk', sans-serif;
@@ -73,7 +73,7 @@ ul { list-style: none; }
 }
 
 #nav.scrolled {
-  background: rgba(245, 242, 236, 0.92);
+  background: rgba(17, 17, 17, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--gray-line);
@@ -451,70 +451,124 @@ ul { list-style: none; }
 }
 
 /* ============================================
-   AWARD
+   EXPERIENCE
    ============================================ */
-#award {
+#experience {
   padding: 160px 0;
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--cream-dark);
 }
 
-.award-inner {
+.experience-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
   align-items: start;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.award-mark {
-  color: var(--cream);
-  opacity: 0.5;
-  padding-top: 8px;
+.experience-headline {
+  position: sticky;
+  top: 120px;
 }
 
-.award-label {
+.experience-label {
+  display: block;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gray-light);
-  display: block;
-  margin-bottom: 20px;
-}
-
-.award-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-  color: var(--cream);
-}
-
-.award-event {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--cream);
-  margin-bottom: 8px;
-}
-
-.award-project {
-  font-size: 0.9rem;
-  color: var(--gray-light);
+  color: var(--accent);
   margin-bottom: 24px;
 }
 
-.award-desc {
-  font-size: 1rem;
+.experience-number {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 14vw, 11rem);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.experience-years {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.experience-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.role {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--gray-line);
+}
+
+.role:first-child {
+  padding-top: 0;
+}
+
+.role:last-of-type {
+  border-bottom: none;
+}
+
+.role-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.role-company {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.role-desc {
+  font-size: 0.9rem;
   font-weight: 300;
-  color: var(--gray-light);
+  color: var(--gray);
   line-height: 1.7;
   max-width: 560px;
-  border-left: 1px solid rgba(201, 196, 188, 0.3);
-  padding-left: 20px;
+}
+
+.experience-extra {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+}
+
+.extra-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.extra-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.extra-value {
+  font-size: 0.9rem;
+  color: var(--ink);
+  font-weight: 300;
 }
 
 /* ============================================
@@ -991,9 +1045,18 @@ footer {
     max-width: 400px;
   }
 
-  .award-inner {
+  .experience-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
+  }
+
+  .experience-headline {
+    position: static;
+  }
+
+  .experience-extra {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .skills-grid {
@@ -1061,7 +1124,7 @@ footer {
     padding: 80px 0;
   }
 
-  #award, #contact {
+  #experience, #contact {
     padding: 100px 0;
   }
 
