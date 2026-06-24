@@ -283,6 +283,11 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxTitle.textContent = project.name;
     lightboxCounter.textContent = (currentImageIdx + 1) + ' / ' + project.large.length;
 
+    // Hide nav arrows when project has only one image
+    const hasMultiple = project.large.length > 1;
+    lightboxPrev.style.display = hasMultiple ? '' : 'none';
+    lightboxNext.style.display = hasMultiple ? '' : 'none';
+
     // Auto-zoom for very tall images (landing page screenshots)
     lightboxImg.onload = function() {
       const ratio = this.naturalHeight / this.naturalWidth;
